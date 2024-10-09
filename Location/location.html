@@ -1,0 +1,107 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Details Form</title>
+    <link rel="stylesheet" href="location.css">
+</head>
+<header style="background-color: #f8f9ff; padding: 10px 20px; border-bottom: 2px groove rgb(53, 43, 43);">
+    <nav class="navbar" style="display: flex; justify-content: space-between; align-items: center; overflow-x: auto; white-space: nowrap;">
+        <a href="../Client/client.html" class="nav-link" id="tab-inspection" 
+           style="flex: 1 1 auto; text-align: center; color: #004494; padding: 14px 20px; text-decoration: none; white-space: nowrap; transition: background-color 0.3s, color 0.3s;"
+           onmouseover="this.style.backgroundColor='#1265c3'; this.style.color='#f8f9ff';" 
+           onmouseout="this.style.backgroundColor=''; this.style.color='#004494';">
+           Client Information
+        </a>
+        <a href="../Location/location.html" class="nav-link" id="tab-location" 
+           style="flex: 1 1 auto; text-align: center; color: #004494; padding: 14px 20px; text-decoration: none; white-space: nowrap; transition: background-color 0.3s, color 0.3s;"
+           onmouseover="this.style.backgroundColor='#1265c3'; this.style.color='#f8f9ff';" 
+           onmouseout="this.style.backgroundColor=''; this.style.color='#004494';">
+            Location Details
+        </a>
+    </nav>
+</header>
+<body>
+    <div>
+    <div class="container">
+        <h1>Location Details</h1>
+        <form id="locationForm">
+            <div class="form-group">
+                <label for="name">Name :</label>
+                <input type="text" id="name" list="clientName" required>
+                <datalist id="clientName"></datalist>
+                <label for="email">Email :</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone :</label>
+                <input type="number" id="phone" required>
+                <label for="locationName">Location :</label>
+                <input type="text" id="locationName" required>
+            </div>
+            <div class="form-group">
+                <label for="add1">Address 1 :</label>
+                <input type="text" id="add1" required>
+                <label for="add2">Address 2 :</label>
+                <input type="text" id="add2">
+            </div>
+            <div class="form-group">
+                <label for="city">City :</label>
+                <input type="text" id="city" required>
+                <label for="district">District :</label>
+                <input type="text" id="district" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State :</label>
+                <input type="text" id="state" required>
+                <label for="pincode">Pincode :</label>
+                <input type="text" id="pincode" required>
+            </div>
+            <div class="form-group">
+                <label for="operationManager">Operation Manager :</label>
+                <input type="text" id="operationManager" required>
+                <label for="surveyType">Survey Type :</label>
+                <select id="surveyType" required>
+                    <option value="" disabled selected>Select Name</option>
+                    <option value="Technical">Technical Survey</option>
+                    <option value="Soft">Soft Survey</option>
+                    <option value="Both">Both</option>
+                </select>
+            </div>
+            <div class="submit-button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    </div>
+        
+    <div class="update">
+        <h2>LOCATION DATA TABLE</h2>
+        <table id="infoTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Location Name</th>
+                    <th>Address 1</th>
+                    <th>Address 2</th>
+                    <th>City</th>
+                    <th>District</th>
+                    <th>State</th>
+                    <th>Pincode</th>
+                    <th>Operation Manager</th>
+                    <th>Survey Type</th>
+                    <th>Open link</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="location.js"></script>
+</body>
+</html>
